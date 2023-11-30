@@ -8,9 +8,12 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Aplicativo</h1>
-
-    <ul class="menu">
+  
+        <div class="main_header_logo">
+            <img src="img/logo.png" alt="logo.png" title="VisionTech"/>
+        </div>
+    
+     <ul class="menu">
         <li><a href="app.php">Home</a></li>
         <li><a href="#" class="submenu-link">Clientes</a>
             <ul class="submenu">
