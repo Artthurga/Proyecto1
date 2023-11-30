@@ -1,8 +1,8 @@
 <?php
 class Database {
     private $host = "localhost";
-    private $username = "root";
-    private $password = "root";
+    private $username = "xxxx";
+    private $password = "xxxx";
     private $database = "db_vision";
     private $conn;
 
