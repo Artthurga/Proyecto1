@@ -10,7 +10,7 @@ if (empty($_POST['usuario']) || empty($_POST['clave'])) {
     $respuesta = $cs->login($_POST['usuario'], $_POST['clave']);
     if ($respuesta[0] === true) {
         // Si el login fue exitoso, redirigiremos a la home:
-        $redirigir = 'proyecto00/app.php?mensaje=' . $respuesta[1];
+        $redirigir = 'proyecto/app.php?mensaje=' . $respuesta[1];
     } else {
         // Si el login fracasó, redirigiremos nuevamente a la pantalla de login:
         $redirigir = 'index.php?mensaje=' . $respuesta[1];
