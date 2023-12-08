@@ -1,14 +1,17 @@
 <?php
-class Clientes {
+require 'Clientes.php';
+
+class Repo_Clientes {
     private $conn;
 
     public function __construct($conn) {
         $this->conn = $conn;
     }
 
-    public function inserirCliente($nome, $endereco, $telefone) {
-        $sql = "INSERT INTO clientes (nombre_cliente, direccion, telefono) VALUES ('$nome', '$endereco', '$telefone')";
-        return $this->conn->query($sql);
+    public function inserirCliente(Clientes $idCliente) {
+        $sql = "INSERT INTO clientes (nombre_cliente, direccion, telefono) VALUES ('$nomeCliente', '$enderecoCliente', '$telefoneCliente')";
+        $this->conn->query($sql);
+        return $idCliente;
     }
 
     public function alterarCliente($id, $nome, $endereco, $telefone) {
@@ -22,8 +25,7 @@ class Clientes {
     }
 
     public function listarCliente() {
-        $sql = "SELECT clientes.nombre_cliente AS NomeCliente, servicos.nome_servico AS NomeServico, servicos.descricao AS DescricaoServico, servicos.preco AS PrecoServico
-    FROM clientes JOIN servicos ON clientes.id_cliente = servicos.id_cliente";
+        $sql = "SELECT *From clientes";
         return $this->conn->query($sql);
     }
 }

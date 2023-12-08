@@ -54,6 +54,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $servicos = new Servicos($conn);
             $servicos->excluirServico($idServico);
             break;
+        
+        case "listar":
+            $idCliente = $_POST["id_cliente"];
+            $idServico = $_POST["id_servico"];
+    
+            $clientes = new Clientes($conn);
+            $clientes->listarCliente($idCliente);
+    
+            $servicos = new Servicos($conn);
+            $servicos->listarServico($idServico);
+            break;   
 
         default:
             echo "Ação inválida";

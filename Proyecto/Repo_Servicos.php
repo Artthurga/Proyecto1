@@ -1,5 +1,5 @@
 <?php
-class Servicos {
+class Repo_Servicos {
     private $conn;
 
     public function __construct($conn) {
@@ -21,6 +21,10 @@ class Servicos {
         return $this->conn->query($sql);
     }
 
+    public function listarServicio(){
+        $sql = "SELECT *FROM servicos";
+        return $this->conn->query($sql);
+    }
 }
 ?>
 

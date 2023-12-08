@@ -20,6 +20,7 @@
                 <li><a href="app.php?submenu=incluir">Incluir</a></li>
                 <li><a href="app.php?submenu=alterar">Alterar</a></li>
                 <li><a href="app.php?submenu=excluir">Excluir</a></li>
+                <li><a href="app.php?submenu=listar">Listar</a></li>
             </ul>
         </li>
     </ul>
