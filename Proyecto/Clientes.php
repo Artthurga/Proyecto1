@@ -8,7 +8,8 @@ class Clientes {
 
     public function inserirCliente($nome, $endereco, $telefone) {
         $sql = "INSERT INTO clientes (nombre_cliente, direccion, telefono) VALUES ('$nome', '$endereco', '$telefone')";
-        return $this->conn->query($sql);
+        $this->conn->query($sql);
+        return $this->conn->insert_id;
     }
 
     public function alterarCliente($id, $nome, $endereco, $telefone) {
