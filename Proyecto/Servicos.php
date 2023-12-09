@@ -1,27 +1,24 @@
 <?php
-class Servicos {
-    private $conn;
+Class Servicios
+{
 
-    public function __construct($conn) {
-        $this->conn = $conn;
+   
+    public $nomeServico;
+    public $descricaoServico;
+    public $precoServico;
+    public $data_Servico;
+    public $idServico;
+
+    public function __construct($nomeServico, $descricaoServico, $precoServico, $dataServico, $idServico)
+    {
+        
+        $this->nomeServico = $nomeServico;
+        $this->descricaoServico = $descricaoServico;
+        $this->precoServico = $precoServico;
+        $this->data_Servico = $dataServico;
+        $this->idServico = $idServico;
+
     }
 
-    public function inserirServico($nome, $descricao, $preco, $idCliente) {
-        $sql = "INSERT INTO servicos (nome_servico, descricao, preco, id_cliente) VALUES ('$nome', '$descricao', $preco, $idCliente)";
-        return $this->conn->query($sql);
-    }
-
-    public function alterarServico($id, $nome, $descricao, $preco, $idCliente) {
-        $sql = "UPDATE servicos SET nome_servico='$nome', descricao='$descricao', preco=$preco, id_cliente=$idCliente WHERE id_servico=$id";
-        return $this->conn->query($sql);
-    }
-
-    public function excluirServico($id) {
-        $sql = "DELETE FROM servicos WHERE id_servico=$id";
-        return $this->conn->query($sql);
-    }
 
 }
-?>
-
-?>
